@@ -270,6 +270,10 @@
   }
 }
 
-.login{
+.body{
   min-height:80%;
+}
+
+abbr[title="required"]{
+  color: red;
 }
