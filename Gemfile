@@ -1,11 +1,39 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
-
+gem 'pg'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'compass-rails'
+gem 'zurb-foundation'
+gem 'simple'
+gem 'simple_form'
+gem 'devise'
+gem 'client_side_validations'
+gem 'client_side_validations-simple_form'
+gem 'activeadmin'
+gem "ckeditor", :git => "https://github.com/artdevil/ckeditor.git"
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'cancan'
+gem 'remotipart', :git => "https://github.com/JangoSteve/remotipart.git"
+
+group :development, :test do
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'capybara-webkit', '~> 0.12.1'
+  gem 'capybara-mechanize', :git => 'git://github.com/jeroenvandijk/capybara-mechanize.git'
+  gem 'launchy'
+  gem 'factory_girl_rails'
+  gem 'test-unit'
+  gem 'ruby-prof'
+  gem 'database_cleaner'
+  gem 'fakeweb'
+  gem 'debugger'
+end
 
 
 # Gems used only for assets and not required
@@ -13,7 +41,7 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
+  gem 'jquery-datatables-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
