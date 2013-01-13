@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.11'
 gem 'pg'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -19,6 +19,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'cancan'
 gem 'remotipart', :git => "https://github.com/JangoSteve/remotipart.git"
+gem 'roo'
 
 group :development, :test do
   gem 'rspec'
@@ -44,7 +45,8 @@ group :assets do
   gem 'jquery-datatables-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
+  gem 'libv8', '~> 3.3.10.4', :platform => :ruby
+  gem 'therubyracer', '~> 0.10.2', :platform => :ruby
   gem 'uglifier', '>= 1.0.3'
 end
 

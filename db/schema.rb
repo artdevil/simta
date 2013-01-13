@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(:version => 20130109113420) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
+    t.string   "email"
     t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -68,9 +68,13 @@ ActiveRecord::Schema.define(:version => 20130109113420) do
     t.datetime "updated_at",                             :null => false
     t.string   "id_key"
     t.string   "user_type"
-    t.string   "avatar"
+    t.string   "username"
+    t.string   "birthday"
     t.string   "address"
+    t.string   "gender"
     t.string   "department"
+    t.string   "religion"
+    t.string   "avatar"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
