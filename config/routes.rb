@@ -2,7 +2,7 @@ Simta::Application.routes.draw do
   root :to => 'pages#index'
   
   devise_for :users
-  
+  resources :topics
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config

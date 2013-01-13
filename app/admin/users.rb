@@ -19,10 +19,10 @@ ActiveAdmin.register User do
 
   controller do
   	def upload_user
-  		@user = User.new
   		spreadsheet = Excelx.new(params[:url].path,false, :ignore)
       header = spreadsheet.row(1)
       (2..spreadsheet.last_row).each do |i|
+        @user = User.new
         row = Hash[[header, spreadsheet.row(i)].transpose]
         @user.attributes = row.to_hash
         @user.save!

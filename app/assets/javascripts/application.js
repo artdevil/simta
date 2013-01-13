@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require foundation
 //= require toastr
+
+$(document).ready(function(){
+  $('.ajax_page').click(function(){
+    $('#page_nav').html('loading .....');
+  });
+});

@@ -20,6 +20,8 @@ gem 'mini_magick'
 gem 'cancan'
 gem 'remotipart', :git => "https://github.com/JangoSteve/remotipart.git"
 gem 'roo'
+gem 'acts-as-taggable-on', '~> 2.3.1'
+gem 'ancestry'
 
 group :development, :test do
   gem 'rspec'
