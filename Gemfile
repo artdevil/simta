@@ -22,6 +22,7 @@ gem 'remotipart', :git => "https://github.com/JangoSteve/remotipart.git"
 gem 'roo'
 gem 'acts-as-taggable-on', '~> 2.3.1'
 gem 'ancestry'
+gem "ckeditor", :git => "https://github.com/artdevil/ckeditor.git"
 
 group :development, :test do
   gem 'rspec'

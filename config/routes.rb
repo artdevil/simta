@@ -1,4 +1,6 @@
 Simta::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
   root :to => 'pages#index'
   
   devise_for :users

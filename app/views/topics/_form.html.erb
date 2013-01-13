@@ -1,15 +1,23 @@
-<%= simple_form_for(@topic) do |f| %>
+<div class="two columns">
+</div>
+<div class="eight columns">
+  <div class="panel">
+    <%= simple_form_for(@topic) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :user_id %>
     <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :abstract %>
-    <%= f.input :status %>
+    <%= f.label :description %>
+    <%= f.cktext_area :description, :toolbar => 'Full' %>
+    <%= f.label :abstract %>
+    <%= f.cktext_area :abstract, :toolbar => 'Full' %>
+    <%= f.input :tag_list, :label => "tag (separates by comma)" %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, :class => "button" %>
   </div>
-<% end %>
+  <% end %>
+  </div>
+</div>
+<div class="two columns"></div>

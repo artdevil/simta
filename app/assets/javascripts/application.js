@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require foundation
 //= require toastr
+//= require ckeditor/init
 
 $(document).ready(function(){
   $('.ajax_page').click(function(){

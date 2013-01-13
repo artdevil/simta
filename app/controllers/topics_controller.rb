@@ -6,4 +6,15 @@ class TopicsController < InheritedResources::Base
       format.js
     end
   end
+
+  def create
+  	@topic = current_user.topics.new(params[:topic])
+    @topic.status = "judul baru"
+  	if @topic.save
+      flash[:success] = "judul TA sudah dibuat."
+  		redirect_to @topic
+  	else
+  		render 'new'
+  	end
+  end
 end

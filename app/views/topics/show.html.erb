@@ -1,30 +1,34 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>User:</b>
-  <%= @topic.user_id %>
-</p>
-
-<p>
-  <b>Title:</b>
-  <%= @topic.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @topic.description %>
-</p>
-
-<p>
-  <b>Abstract:</b>
-  <%= @topic.abstract %>
-</p>
-
+<div class="container body">
+  <div class="row">
+    <div class="two columns"></div>
+    <div class="eight columns">
+      <p id="notice"><%= notice %></p>
+    </div>
+    <div class="two columns"></div>
+  </div>
+  <div class="row">
+    <div class="two columns"></div>
+    <div class="eight columns">
+      <h1><%= @topic.title %></h1>
+      <div class="panel">
+        <p>
+          <b>Description:</b>
+          <%= raw @topic.description %>
+        </p>
+        <p>
+          <b>Abstract:</b>
+          <%= raw @topic.abstract %>
+        </p>
+      </div>
+    </div>
+    <div class="two columns"></div>
+  </div>
+  <div class="row">
+  </div>
+</div>
 <p>
   <b>Status:</b>
   <%= @topic.status %>
 </p>
 
-
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>
