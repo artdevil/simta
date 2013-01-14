@@ -3,11 +3,14 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable,:recoverable,
   has_many :topics
+  belongs_to :user_select, :class_name => "Topic"
+  has_private_messages
   devise :database_authenticatable, :registerable,
         :rememberable, :trackable, :authentication_keys => [:id_key]
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email,:id_key, :password, :password_confirmation, :remember_me, :user_type, :address, :username, :birthday, :gender, :department, :religion, :avatar
+  attr_accessible :email, :id_key, :password, :password_confirmation, :remember_me, :user_type, :address, :username, :birthday, :gender, :department, :religion, :avatar
+  validates_uniqueness_of :id_key
   # attr_accessible :title, :body
   def self.import_file(file)
     if file

@@ -3,10 +3,7 @@
 
   <table>
     <tr>
-      <th>User</th>
       <th>Title</th>
-      <th>Description</th>
-      <th>Abstract</th>
       <th>Status</th>
       <th></th>
       <th></th>
@@ -15,10 +12,7 @@
 
   <% @topics.each do |topic| %>
     <tr>
-      <td><%= topic.user_id %></td>
       <td><%= topic.title %></td>
-      <td><%= topic.description %></td>
-      <td><%= topic.abstract %></td>
       <td><%= topic.status %></td>
       <td><%= link_to 'Show', topic %></td>
       <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
@@ -26,9 +20,5 @@
     </tr>
   <% end %>
   </table>
-
-  <br />
-
-  <%= link_to 'New Topic', new_topic_path %>
   
 </div>

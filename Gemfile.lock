@@ -7,6 +7,12 @@ GIT
       mechanize (~> 2.3)
 
 GIT
+  remote: git://github.com/jongilbraith/simple-private-messages.git
+  revision: 7ba7d3c9f7670ef3bddfc90390a49556a94f7013
+  specs:
+    simple-private-messages (0.0.0)
+
+GIT
   remote: https://github.com/JangoSteve/remotipart.git
   revision: fcb78911169c06cf5dbf8ef455b4861b44fc833e
   specs:
@@ -365,6 +371,7 @@ DEPENDENCIES
   ruby-prof
   sass-rails (~> 3.2.3)
   simple
+  simple-private-messages (= 0.0.0)!
   simple_form
   sqlite3
   test-unit

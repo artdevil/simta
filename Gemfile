@@ -23,6 +23,7 @@ gem 'roo'
 gem 'acts-as-taggable-on', '~> 2.3.1'
 gem 'ancestry'
 gem "ckeditor", :git => "https://github.com/artdevil/ckeditor.git"
+gem 'simple-private-messages', '0.0.0', :git => 'git://github.com/jongilbraith/simple-private-messages.git'
 
 group :development, :test do
   gem 'rspec'

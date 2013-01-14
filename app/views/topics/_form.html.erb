@@ -2,16 +2,17 @@
 </div>
 <div class="eight columns">
   <div class="panel">
-    <%= simple_form_for(@topic) do |f| %>
+    <%= simple_form_for @topic, :validate => true do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :title %>
     <%= f.label :description %>
-    <%= f.cktext_area :description, :toolbar => 'Full' %>
+    <%= f.cktext_area :description, :toolbar => 'Basic' %>
     <%= f.label :abstract %>
-    <%= f.cktext_area :abstract, :toolbar => 'Full' %>
+    <%= f.cktext_area :abstract, :toolbar => 'Basic' %>
     <%= f.input :tag_list, :label => "tag (separates by comma)" %>
+    <%= f.input :user_select, :input_html => {data: {autocomplete_source: user_select_topics_path}} %>
   </div>
 
   <div class="form-actions">

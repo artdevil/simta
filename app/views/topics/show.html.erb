@@ -19,6 +19,16 @@
           <b>Abstract:</b>
           <%= raw @topic.abstract %>
         </p>
+        <p>
+          <b>Status:</b>
+          <%= @topic.status %>
+        </p>
+        <% if User.find_by_id_key(@topic.user_select) %>
+          <p>
+            <b>siswa yang mengerjakan:</b>
+            <%= User.find_by_id_key(@topic.user_select).username %>
+          </p>
+        <% end %>
       </div>
     </div>
     <div class="two columns"></div>
@@ -26,9 +36,5 @@
   <div class="row">
   </div>
 </div>
-<p>
-  <b>Status:</b>
-  <%= @topic.status %>
-</p>
 
 <%= link_to 'Back', topics_path %>

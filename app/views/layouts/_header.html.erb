@@ -6,9 +6,7 @@
           <!-- Title Area -->
           <li class="name">
             <h1>
-              <a href="#">
-                SIMTA
-              </a>
+              <%= link_to "SIMTA", root_path %>
             </h1>
           </li>
           <li class="toggle-topbar"><a href="#"></a></li>
@@ -59,9 +57,10 @@
             <ul class="right">
               <li class="divider show-for-medium-and-up"></li>
               <li class="has-dropdown">
-                <a href="#">welcome</a>
+                <a href="#"><%= current_user.username %></a>
                 <ul class="dropdown">
                   <li><label>User section</label></li>
+                  <li><%= link_to "Messages", messages_path %></li>
                   <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
                   <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
                 </ul>

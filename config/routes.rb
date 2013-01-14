@@ -4,7 +4,12 @@ Simta::Application.routes.draw do
   root :to => 'pages#index'
   
   devise_for :users
-  resources :topics
+  resources :topics do
+    collection do
+      get 'user_select'
+    end
+  end
+  resources :messages
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config

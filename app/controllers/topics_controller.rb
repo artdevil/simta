@@ -1,4 +1,7 @@
 class TopicsController < InheritedResources::Base
+  before_filter :authenticate_user!
+  load_and_authorize_resource :except => [:user_select]
+  
   def index
     @topics = Topic.all
     respond_to do |format|
@@ -6,15 +9,19 @@ class TopicsController < InheritedResources::Base
       format.js
     end
   end
-
+  
   def create
   	@topic = current_user.topics.new(params[:topic])
     @topic.status = "judul baru"
   	if @topic.save
-      flash[:success] = "judul TA sudah dibuat."
-  		redirect_to @topic
+  		redirect_to @topic, :flash => { :success => "judul TA sudah dibuat." }
   	else
   		render 'new'
   	end
+  end
+  
+  def user_select
+    @user = User.where("username LIKE ? OR id_key LIKE ? ", "#{params[:term]}%","#{params[:term]}%")
+    render json: @user.map(&:id_key)
   end
 end

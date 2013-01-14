@@ -11,10 +11,14 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require foundation
 //= require toastr
+//= require rails.validations
+//= require rails.validations.simple_form
 //= require ckeditor/init
+//= require topics
 
 $(document).ready(function(){
   $('.ajax_page').click(function(){
