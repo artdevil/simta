@@ -11,9 +11,12 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require jquery-ui
+//= require jquery.ui.all
 //= require jquery_ujs
+//= require autocomplete-rails
+//= require dataTables/jquery.dataTables
 //= require foundation
+//= require jquery_nested_form
 //= require toastr
 //= require rails.validations
 //= require rails.validations.simple_form

@@ -24,7 +24,7 @@
 </head>
 <body>
   <%= render :partial => "layouts/header" %>
-  <%= render :partial => "shared/flash_messages" %>
+  <%= render :partial => "shared/flash_messages", :locals => { :flash => flash } %>
   <%= yield %>
   <%= render :partial => "layouts/footer" %>
 </body>

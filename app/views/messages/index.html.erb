@@ -1,1 +1,29 @@
-tes
+<div class="container body">
+  <div class="row">
+    <div class="twelve columns">
+      <h1>Message</h1>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="twelve columns">
+      <dl class="tabs">
+        <dd class="active"><a href="#simple1">Inbox (<%= current_user.unread_message_count %> unread)</a></dd>
+        <dd><a href="#simple2">Outbox</a></dd>
+        <dd><a href="#simple3">New message</a></dd>
+      </dl>
+      <ul class="tabs-content">
+        <li class="active" id="simple1Tab">
+          <%= render 'inbox' %>
+        </li>
+        <li id="simple2Tab">
+          <%= render 'outbox' %>
+        </li>
+        <li id="simple3Tab">
+          <%= render 'form' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

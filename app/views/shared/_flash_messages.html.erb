@@ -1,14 +1,16 @@
-<script type="text/javascript">
-<% if flash[:notice] %>
-toastr.success("<%= flash[:notice] %>");
+<% flash.each do |key, value| %>
+  <script type="text/javascript">
+  <% if key == :alert %>
+    toastr.error("<%= value %>");
+  <% end %>
+  <% if key == :info %>
+    toastr.info("<%= value %>");
+  <% end %>
+  <% if key == :notice %>
+    toastr.success("<%= value %>");
+  <% end %>
+  <% if key == :success %>
+    toastr.success("<%= value %>");
+  <% end %>
+  </script>
 <% end %>
-<% if flash[:error] %>
-toastr.error("<%= flash[:error] %>");
-<% end %>
-<% if flash[:alert] %>
-toastr.error("<%= flash[:alert] %>");
-<% end %>
-<% if flash[:info] %>
-toastr.info("<%= flash[:info] %>");
-<% end %>
-</script>

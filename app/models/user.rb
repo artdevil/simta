@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
         :rememberable, :trackable, :authentication_keys => [:id_key]
 
+  scope :user_student, lambda{|params| where("(username LIKE ? OR id_key LIKE ?) AND user_type != 'lecture'", "#{params}%","#{params}%")}
+  scope :user_lecture, lambda{|params| where("(username LIKE ? OR id_key LIKE ?) AND user_type != 'student'", "#{params}%","#{params}%")}
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :id_key, :password, :password_confirmation, :remember_me, :user_type, :address, :username, :birthday, :gender, :department, :religion, :avatar
   validates_uniqueness_of :id_key

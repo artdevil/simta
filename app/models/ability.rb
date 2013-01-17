@@ -5,12 +5,12 @@ class Ability
     if user.user_type == "student"
       can :read, Topic
       cannot :create, Topic
-      can :manage, Message, :user_id => user.id
+      can :manage, Message
     end
     
     if user.user_type == "lecture"
       can :manage, Topic, :user_id => user.id
-      can :manage, Message, :user_id => user.id
+      can :manage, Message
     end
     # Define abilities for the passed in user here. For example:
     #

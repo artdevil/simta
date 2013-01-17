@@ -9,7 +9,11 @@ Simta::Application.routes.draw do
       get 'user_select'
     end
   end
-  resources :messages
+  resources :messages do
+    post :create_message, :on => :collection
+    get :autocomplete_user_username, :on => :collection
+    get :user, :on => :collection
+  end
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config

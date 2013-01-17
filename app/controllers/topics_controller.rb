@@ -21,7 +21,7 @@ class TopicsController < InheritedResources::Base
   end
   
   def user_select
-    @user = User.where("username LIKE ? OR id_key LIKE ? ", "#{params[:term]}%","#{params[:term]}%")
-    render json: @user.map(&:id_key)
+    @user = User.user_student params[:term]
+    render json: @user.map(&:username)
   end
 end

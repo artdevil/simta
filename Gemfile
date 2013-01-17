@@ -24,6 +24,9 @@ gem 'acts-as-taggable-on', '~> 2.3.1'
 gem 'ancestry'
 gem "ckeditor", :git => "https://github.com/artdevil/ckeditor.git"
 gem 'simple-private-messages', '0.0.0', :git => 'git://github.com/jongilbraith/simple-private-messages.git'
+gem 'jquery-datatables-rails'
+gem "nested_form"
+gem 'rails3-jquery-autocomplete'
 
 group :development, :test do
   gem 'rspec'
@@ -46,7 +49,6 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'jquery-datatables-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
   gem 'libv8', '~> 3.3.10.4', :platform => :ruby
@@ -55,6 +57,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

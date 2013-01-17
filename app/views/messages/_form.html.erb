@@ -1,0 +1,18 @@
+<div class="twelve">
+  <div class="panel">
+    <%= simple_nested_form_for @message, :url => create_message_messages_path do |f| %>
+      <%= f.input :recipient, :label => "To: ", :url => user_messages_path, :as => :autocomplete %>
+      <%= f.input :subject, :label => "Subject: "%>
+      <%= f.cktext_area :body, :label => "body: ", :toolbar => 'Basic' %>
+      <%= f.simple_fields_for :attachments do |n| %>
+        <div class="row">
+          <div class="three">
+            <%= n.input :attachment_name %>
+          </div>
+        </div>
+      <% end %>
+      <p><%= f.link_to_add "Add a attachment", :attachments %></p>
+      <%= f.submit "send message", :class => "button"%>
+    <% end %>
+  </div>
+</div>

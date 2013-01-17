@@ -1,0 +1,19 @@
+<table class="twelve">
+  <thead>
+    <tr>
+      <th>Subject</th>
+      <th>From</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% current_user.received_messages do |f| %>
+      <tr>
+        <td>Content</td>
+        <td>This is longer content</td>
+        <td>Content</td>
+        <td>Content</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
